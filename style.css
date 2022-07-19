@@ -1,0 +1,66 @@
+body{
+    font-family: sans-serif;
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(37, 157, 238);
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1%;
+    border-color: gray;
+}
+
+h3{
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 50px;
+    align-items: flex-start;
+}
+
+.produto{
+    background-color: rgb(37, 157, 238);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px ;
+}
+
+.produto:hover{
+    top: -2px;
+    box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.3);
+    transition: all .2s ease-in-out;
+}
+
+#catalogo button{
+    text-align: center;
+    background-color: rgb(235, 117, 6);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 25%;
+    padding: 3px 15px;
+    border-radius: 3px;
+}
+
+#catalogo .produto button:hover{
+    background-color: rgb(70, 163, 27);
+    font-size: 800;
+    transition: all .2s ease-in-out;
+}
