@@ -27,7 +27,7 @@ h3{
     text-transform: uppercase;
 }
 
-#catalogo{
+#catalogo #produtos{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -50,7 +50,7 @@ h3{
 
 #catalogo button{
     text-align: center;
-    background-color: rgb(235, 117, 6);
+    background-color: orange;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -61,12 +61,13 @@ h3{
 }
 
 #catalogo .produto button:hover{
-    background-color: rgb(70, 163, 27);
+    background-color: rgb(240, 121, 10);
     font-size: 800;
     transition: all .2s ease-in-out;
 }
 
 #formulario{
+    border-radius: 5px;
     width: auto;
     padding: 10px 10px;
     display: flex;
@@ -79,7 +80,13 @@ h3{
     padding: 10px 20px;
     margin: 5px;
     border-radius: 5px;
-    border: 1px solid gray;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+}
+
+#formulario input:hover{
+    background-color: #d4d8da;
 }
 
 #formulario button{
@@ -95,6 +102,6 @@ h3{
 }
 
 #formulario button:hover{
-    background-color: rgb(70, 163, 27);
+    background-color: rgb(240, 121, 10);
     transition: all .2s ease-in-out;
 }
