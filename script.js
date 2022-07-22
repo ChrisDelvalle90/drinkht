@@ -6,6 +6,10 @@ function adicionar(){
     novoBebidas.campoPreco = document.getElementById("campoPreco").value
     novoBebidas.campoImagem = document.getElementById("campoImagem").value
 
+    document.getElementById("campoDesc").value = ""
+    document.getElementById("campoPreco").value = ""
+    document.getElementById("campoImagem").value = ""
+
     if(campoDesc == "" || campoPreco == ""|| campoImagem == "")
     {
         alert("Preencha todos os campos!")
@@ -27,7 +31,7 @@ function imprimeCatalogo(){
             <img src="${bebidas[i].campoImagem}" alt=""/>
             <div>
                 <h3>${bebidas[i].campoDesc}</h3>
-                <h3>R$: ${bebidas[i].campoPreco}</h3>
+                <h3>R$: ${bebidas[i].campoPreco.toString().replace(".", ",")}</h3>
                 <button>COMPRAR</button>
             </div>
         </div>
