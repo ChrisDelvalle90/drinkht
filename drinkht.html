@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/fabrica.png">
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
     <title>DrinkHT</title>
 </head>
 
@@ -18,12 +18,13 @@
         <div><input id="campoDesc" type="text" placeholder="Descrição do produto"></div>
         <div><input id="campoPreco" type="number" placeholder="Preço"></div>
         <div><input id="campoImagem" type="url" placeholder="Link da imagem"></div>
-        <div><button onclick="adicionar()">Adicionar</button></div>
+        <div><button id="btnAdicionar" type="button">Adicionar</button></div>
     </div>
-
+    <!-- Catálogo de produtos -->
     <div id="catalogo">
         <div id="produtos"></div>
     </div>
-</body>
 
+    <!-- <script src="script.js" type="module"></script> -->
+</body>
 </html>
