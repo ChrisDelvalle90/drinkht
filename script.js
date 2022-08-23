@@ -23,7 +23,6 @@ function adicionar(){
         imprimeCatalogo()
     }
 }
-
 // Função que faz a inserção do HTML no catalogo
 function imprimeCatalogo(){
     let divProdutos = document.getElementById("produtos")
@@ -44,3 +43,49 @@ function imprimeCatalogo(){
 }
 // Executa o botão adicionar
 document.getElementById("btnAdicionar").onclick = adicionar
+
+//Função de busca
+function buscar(){
+    let campoBusca = document.getElementById("campoBusca").value
+    document.getElementById("campoBusca").value = ""
+    let divProdutos = document.getElementById("produtos")
+    
+    if(campoBusca == "")
+    {
+        alert("Digite o nome do produto para buscar!")
+    }
+    else if(campoBusca != "")
+    {
+        for(let i = 0; i < bebidas.length; i++)
+        {
+            if(campoBusca == bebidas[i].campoDesc)
+            {
+                divProdutos.innerHTML = `
+                <div class="produto">
+                    <img src="${bebidas[i].campoImagem}" alt=""/>
+                    <div>
+                        <h3>${bebidas[i].campoDesc}</h3>
+                        <h3>R$: ${bebidas[i].campoPreco.toString().replace(".", ",")}</h3>
+                        <button>COMPRAR</button>
+                    </div>
+                </div>
+                `
+            } 
+        }
+    }
+    else
+    {
+        alert("Produto não encontrado!")
+    }
+}
+//Executa o botão buscar
+document.getElementById("btnBuscar").onclick = buscar
+
+//Função limpar busca
+function limpar()
+{
+    document.getElementById("produtos").innerHTML = ""
+    imprimeCatalogo()
+}
+//Executa o botão limpar
+document.getElementById("btnLimpar").onclick = limpar

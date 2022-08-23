@@ -8,6 +8,7 @@ body{
 img{
     width: 200px;
     height: 200px;
+    border-radius: 3px;
 }
 
 h1{
@@ -76,7 +77,6 @@ h3{
 }
 
 #formulario input{
-    
     padding: 10px 20px;
     margin: 5px;
     border-radius: 5px;
@@ -87,6 +87,42 @@ h3{
 
 #formulario input:hover{
     background-color: #d4d8da;
+}
+
+.divBusca{
+    border-radius: 5px;
+    width: auto;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(37, 157, 238);
+}
+.divBusca input{
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+}
+.divBusca input:hover{
+    background-color: #d4d8da;
+}
+.divBusca button{
+    color: white;
+    font-weight: bold;
+    background-color: orange;
+    padding: 10px 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.divBusca button:hover{
+    background-color: rgb(240, 121, 10);
+    font-size: 800;
+    transition: all .2s ease-in-out;
 }
 
 #formulario button{
